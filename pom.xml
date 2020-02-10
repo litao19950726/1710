@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.bawei</groupId>
+	<artifactId>maventest</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+
+	<!-- 依赖jar -->
+	<dependencies>
+		<dependency>
+			<!-- 组织 -->
+			<groupId>org.springframework</groupId>
+			<!-- 项目或模块名 -->
+			<artifactId>spring-webmvc</artifactId>
+			<!-- 版本号 -->
+			<version>5.1.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+	</dependencies>
+
+
+	<!-- 改变项目的编译版本 -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+
+
+			<!-- 配置jetty 插件 -->
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.3.7.v20160115</version>
+				<configuration>
+				    <httpConnector>
+				       <!-- 访问路径 -->
+				      <host>localhost</host>
+				      <!-- 端口号 -->
+				       <port>80</port>
+				    </httpConnector>				
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

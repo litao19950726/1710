@@ -16,7 +16,7 @@
 			<!-- 项目或模块名 -->
 			<artifactId>spring-webmvc</artifactId>
 			<!-- 版本号 -->
-			<version>5.1.5.RELEASE</version>
+			<version>5.2.20.RELEASE</version>
 		</dependency>
 
 		<dependency>
